@@ -8,6 +8,6 @@ namespace PixelGraphics.Interfaces
 {
     interface IPixelDraw
     {
-        public void Draw();
+        void Draw();
     }
 }
