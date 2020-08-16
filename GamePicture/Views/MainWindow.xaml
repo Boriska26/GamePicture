@@ -6,11 +6,30 @@
         xmlns:uc="clr-namespace:GamePicture.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFB1B1B1">
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="20" />
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <uc:MenuUserControl/>
+        <uc:MenuUserControl Grid.Row="0"/>
+        <Grid Grid.Row="1" Background="#FFB1B1B1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Width="10" Grid.Column="0">
+                <GridSplitter.Template>
+                    <ControlTemplate>
+                        <Grid>
+                            <Rectangle Width="5" HorizontalAlignment="Right" Fill="#FF606060"/>
+                            <Rectangle Width="10" VerticalAlignment="Center" Height="25" Fill="#FF1B1B1B"/>
+                        </Grid>
+                    </ControlTemplate>
+                </GridSplitter.Template>
+            </GridSplitter>
+            <Grid Grid.Column="2">
+                <Rectangle Fill="#FF737373" />
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
